@@ -26,8 +26,7 @@ export default function UpdateProfileForm({ initialName }) {
       return;
     }
     toast.success("তথ্য সফলভাবে আপডেট হয়েছে");
-    router.push("/profile");
-    router.refresh();
+    window.location.assign("/profile");
   }
 
   return (

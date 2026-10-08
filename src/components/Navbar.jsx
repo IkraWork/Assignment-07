@@ -24,8 +24,7 @@ export default function Navbar({ categories }) {
       return;
     }
     toast.success("সফলভাবে সাইন আউট হয়েছে");
-    router.push("/");
-    router.refresh();
+    window.location.assign("/");
   }
 
   const user = session?.user;

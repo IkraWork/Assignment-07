@@ -58,7 +58,7 @@ export default function AuthForm({ mode, redirectTo = "/", reason = "" }) {
         return;
       }
       toast.success("রেজিস্ট্রেশন সফল হয়েছে, এখন সাইন ইন করুন");
-      router.push("/signin");
+      window.location.assign("/signin");
       return;
     }
 
@@ -74,8 +74,7 @@ export default function AuthForm({ mode, redirectTo = "/", reason = "" }) {
       return;
     }
     toast.success("সফলভাবে সাইন ইন হয়েছে");
-    router.push(redirectTo);
-    router.refresh();
+    window.location.assign(redirectTo);
   }
 
   return (
