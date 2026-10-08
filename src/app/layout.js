@@ -16,7 +16,7 @@ export default async function RootLayout({ children }) {
   const [categories, { products }] = await Promise.all([getCategories(), getProducts()]);
 
   return (
-    <html lang="bn" data-theme="bazar">
+    <html lang="bn" translate="no" data-theme="bazar">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
@@ -24,6 +24,7 @@ export default async function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
+        <meta name="google" content="notranslate" />
       </head>
       <body className="flex min-h-screen flex-col">
         <Providers>
